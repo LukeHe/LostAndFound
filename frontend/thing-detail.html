@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href="Public/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="Public/css/bootstrap.css" rel="stylesheet">
+		<link href="Public/css/index.css" rel="stylesheet">
+
+		<script src="Public/js/bootstrap.min.js"></script>
+		<script src="Public/js/jquery-1.7.1.min.js"></script>
+		<script src="Public/js/index.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<a class="oval return" href="javascript:history.go(-1);"style="color: #666;text-decoration: none;display: block;float:right;margin-right:20%;margin-top:2%;text-align:center">
+				<div style="height:7px;"></div>返回
+			</a>
+			<div class="form-container" style="margin-top:8%;width:50%;height:auto;margin-left:25%;">			
+				<form action="__SELF__" method="POST" >
+					<legend>丢失物品</legend>
+					<input id="selectpic" type="file" name="selectpic" onchange="previewImage(this,'mypic');" style="display:none" /><br/>
+					<div class="selectedpic" onclick="document.getElementById('selectpic').click();" id="mypic">
+					<p>点击选择图片</p>
+					</div>
+					<label style="margin-top:20px;" for="videoname">物品名称 </label> <input style="margin-top:15px;" name="name" type="text" value=""/><br/>
+					<label for="updator">物品属性 </label> <input name="updator" type="text" value=""/><br/>
+					<label for="time">丢失时间 </label> <input name="speaker" type="text" value=""/><br/>
+					<label for="speaker">丢失地点 </label> <input name="speaker" type="text" value=""/><br/>
+					<label for="feature">物品描述 </label> <textarea name="feature" rows="5" cols="30" value=""></textarea><br/>
+					<button type="submit" class="btn" style="margin-left:20%;" onclick="return check_video_approve();"><strong style="font-size:20px;">失主资料</strong></button>
+					<button type="submit" class="btn" style="margin-left:20%;"onclick="return check_video_refuse();"><strong style="font-size:20px;color:#700000">联系失主</strong></button>
+				</form>
+			</div>
+			<hr></hr>
+			<div class="footer">
+			<p>@Lost and Found in RUC</p>
+			</div>
+		</div>
+	</body>
+</html>

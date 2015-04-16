@@ -1,0 +1,1 @@
+背景色透明，文字不透明，文字的position:relative
